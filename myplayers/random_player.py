@@ -1,4 +1,4 @@
-import os, random
+import random
 
 is_last = False
 
