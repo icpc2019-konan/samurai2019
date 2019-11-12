@@ -1,8 +1,8 @@
 # SamurAIコーディング 2019
 
-## 自分のプレイヤーの書き方 Python編
+## 自分のプレイヤーの書き方（Python編）
 
-myplayers/random_player.py が例になります．単にランダムに動きを決めるだけのプログラムです．
+[myplayers/random_player.py](myplayers/random_player.py) が例になります．単にランダムに動きを決めるだけのプログラムです．
 
 ## 実行の仕方
 
