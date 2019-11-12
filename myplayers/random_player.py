@@ -12,7 +12,7 @@ while not is_last:
         is_last = True
 
     '''
-    need to change below
+    you need to change below
     '''
 
     # choose random number from 0, 2, 4, 6
