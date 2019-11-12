@@ -1,1 +1,29 @@
-# samurai2019
+# SamurAIコーディング 2019
+
+## 自分のプレイヤーの書き方 Python編
+
+myplayers/random_player.py が例になります．単にランダムに動きを決めるだけのプログラムです．
+
+## 実行の仕方
+
+実行するときは，manager プログラムの引数として自分の作ったプログラムを指定します．ただし，実行可能なプログラムを指定する必要がありますので，Python のプログラムをそのまま指定することはできません．
+
+代わりに実行可能なシェルスクリプト player.sh を用意して，スクリプトの中からPythonのプログラムを呼び出します．
+
+```
+$ cat myplayers/player.sh
+#!/bin/sh
+python myplayers/random_player.py
+```
+
+chmod コマンドでパーミッションを与えて実行可能にするのを忘れないようにしましょう．
+
+```
+$ chmod u+x myplayers/player.sh
+```
+
+次の例では，プレイヤーA，プレイヤーBとも，同じ player.sh を使っています．
+
+```sh
+manager/manager samples/sample.dighere myplayers/player.sh myplayers/player.sh > log/random.dighere
+```
