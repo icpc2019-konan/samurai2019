@@ -30,4 +30,4 @@ $ chmod u+x myplayers/player.sh
 $ manager/manager samples/sample.dighere myplayers/player.sh myplayers/player.sh > random.dighere
 ```
 
-なお，出力されるログファイルを[デモプログラム](https://tastasgit.github.io/Software-for-IPSJ-International-AI-Programming-Contest-SamurAI-Coding-2019-2020/webpage/dighere.html)に読み込んでプレーの様子を再生しようとすると，何ステップ目かでエラーになってしまいます．これはどうもプレイヤーが壁の方向など動けない方向に動こうとしたときに起きてしまうようです．実際にはランダムではなくもう少し賢い戦略を考えますので，その場合はエラーにはならないと思われます．
+なお，出力されるログファイル random.dighere を[デモプログラム](https://tastasgit.github.io/Software-for-IPSJ-International-AI-Programming-Contest-SamurAI-Coding-2019-2020/webpage/dighere.html)に読み込んでプレーの様子を再生しようとすると，何ステップ目かでエラーになってしまいます．これはどうもプレイヤーが壁の方向など動けない方向に動こうとしたときに起きてしまうようです．実際にはランダムではなくもう少し賢い戦略を考えますので，その場合はエラーにはならないと思われます．
