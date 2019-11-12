@@ -24,10 +24,10 @@ chmod コマンドでパーミッションを与えて実行可能にするの�
 $ chmod u+x myplayers/player.sh
 ```
 
-次の例では，プレイヤーA，プレイヤーBとも，同じ player.sh を使っています．
+次の例では，プレイヤーA，プレイヤーBとも，同じ player.sh を使っています．（ランダムプレイヤー同士の戦いです．）
 
 ```bash
 $ manager/manager samples/sample.dighere myplayers/player.sh myplayers/player.sh > log/random.dighere
 ```
 
-なお，出力されるログファイルを[デモプログラム](https://tastasgit.github.io/Software-for-IPSJ-International-AI-Programming-Contest-SamurAI-Coding-2019-2020/webpage/dighere.html)に読み込んでプレーの様子を再生しようとすると，何ステップ目かでエラーになってしまいます．これはどうもプレイヤーが壁の方向などに動こうとしたときに置きてしまうようです．実際にはランダムではなくもう少し賢い戦略を考えますので，その場合はエラーにはならないと思われます．
+なお，出力されるログファイルを[デモプログラム](https://tastasgit.github.io/Software-for-IPSJ-International-AI-Programming-Contest-SamurAI-Coding-2019-2020/webpage/dighere.html)に読み込んでプレーの様子を再生しようとすると，何ステップ目かでエラーになってしまいます．これはどうもプレイヤーが壁の方向などに動こうとしたときに起きてしまうようです．実際にはランダムではなくもう少し賢い戦略を考えますので，その場合はエラーにはならないと思われます．
