@@ -10,7 +10,7 @@
 
 代わりに実行可能なシェルスクリプト player.sh を用意して，スクリプトの中からPythonのプログラムを呼び出します．
 
-```
+```sh
 $ cat myplayers/player.sh
 #!/bin/sh
 python myplayers/random_player.py
@@ -18,12 +18,12 @@ python myplayers/random_player.py
 
 chmod コマンドでパーミッションを与えて実行可能にするのを忘れないようにしましょう．
 
-```
+```sh
 $ chmod u+x myplayers/player.sh
 ```
 
 次の例では，プレイヤーA，プレイヤーBとも，同じ player.sh を使っています．
 
 ```sh
-manager/manager samples/sample.dighere myplayers/player.sh myplayers/player.sh > log/random.dighere
+$ manager/manager samples/sample.dighere myplayers/player.sh myplayers/player.sh > log/random.dighere
 ```
