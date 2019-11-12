@@ -1,8 +1,10 @@
-# SamurAIコーディング 2019
+# SamurAI コーディング 2019
 
-## 自分のプレイヤーの書き方（Python編）
+Python で自作プレイヤーを作るときの参考資料です．他にもっと良いやり方があれば教えてください．
 
-[myplayers/random_player.py](myplayers/random_player.py) が例になります．単にランダムに動きを決めるだけのプログラムです．
+## 自分のプレイヤーの書き方（Python 編）
+
+[myplayers/random_player.py](myplayers/random_player.py) が例になります．単にランダムに動きを決めるだけのプログラムです．myplayers のディレクトリごと，SamurAIコーディング用のコードのディレクトリに置いてください．
 
 ## 実行の仕方
 
