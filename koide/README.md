@@ -94,7 +94,7 @@ Windows環境内にUbuntuを導入する方法を調べるため，「Windows Ub
 
     今度こそ，"make all"でコンパイル完了です．[REAMDE-jp.mdファイル](https://github.com/takashi-chikayama/Software-for-IPSJ-International-AI-Programming-Contest-SamurAI-Coding-2019-2020/blob/master/README-jp.md)に書かれているように，4種類の実行可能ファイルが作成されているはずです．
 
-## その他のUbuntu環境設定
+## その他のUbuntu環境設定・操作方法
 
 プログラムを作成したり，実行したりするときに便利なように，少し設定を加えた方がいいでしょう．
 
@@ -111,6 +111,14 @@ Windows環境内にUbuntuを導入する方法を調べるため，「Windows Ub
     Ubuntu上でプログラムを開発できる環境を用意した方が，WindowsとUbuntuの切り替えをせずに作業ができます．私はPythonを使うために，PyCharmを選択しました．
 
     追加方法は，ランチャー内に「A」の文字が書いてある赤いアイコン（Ubuntuソフトウェア）を起動して，検察窓に「PyCharm」を入力し，表示されたPyCharm CEをインストールしました．Ubuntuソフトウェアは，WindowsのMicrosoft Store，AndroidのGoogle Play，iOSのApp Storeのようなものです．
+
+- スリープからの復帰
+
+    スリープになって画面が真っ暗になったときに復活するには，何かキーを押して下さい．Windowsならマウスを動かしてもOKですが，UbuntuではNGのようです．
+    
+- 電源オフ
+
+    Ubuntuの電源を切るためのボタンは，画面の左上にある小さな下三角（▼）ボタンです．クリックすると，電源ボタンが見つかります．
 
 ## テストラン
 
