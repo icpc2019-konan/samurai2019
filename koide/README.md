@@ -132,20 +132,20 @@ $ make testrun
 ```bash
 $ manager/manager samples/sample.dighere myplayers/player.sh myplayers/player.sh > random.dighere
 ```
-    はちょっと長く，（私のように）何度も入力するのが面倒な人はシェルスクリプトにすることをおススメします．例えば，テキストエディタ―を開いて
+はちょっと長く，（私のように）何度も入力するのが面倒な人はシェルスクリプトにすることをおススメします．例えば，テキストエディタ―を開いて
 ```bash
 #!/bin/sh
 manager/manager samples/sample.dighere myplayers/player.sh myplayers/player.sh > random.dighere
 ```
-    と入力して，例えば game.sh と名前を付けてトップフォルダ内に保存します．このファイルを実行可能ファイルにするために，chmod を使います．
+と入力して，例えば game.sh と名前を付けてトップフォルダ内に保存します．このファイルを実行可能ファイルにするために，chmod を使います．
 ```bash
 $ chmod u+x game.sh
 ```
-    あとは端末を起動して，
+あとは端末を起動して，
 ```bash
 $ ./game.sh
 ```
-    で実行可能です．（何で「./」が必要なのか，誰か教えて下さい～）
+で実行可能です．（何で「./」が必要なのか，誰か教えて下さい～）
 
 ## （おまけ）Pythonプログラムを実行してみて気付いたこと
 
