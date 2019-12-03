@@ -6,5 +6,5 @@
 
 ## 自分のプレイヤーの書き方（Python 編）
 
-[python/README.md](python/README.md) を見てください．
+[Python.md](Python.md) を見てください．
 
