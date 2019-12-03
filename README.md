@@ -1,10 +1,10 @@
 # SamurAI コーディング 2019~2020
 
-## Windows上でのLinux環境の作り方
+## Windows 上での Linux 環境の作り方
 
-[koide/README.md](koide/README.md)を見てください．
+[koide/README.md](koide/README.md) を見てください．
 
 ## 自分のプレイヤーの書き方（Python 編）
 
-[python/README.md](python/README.md)を見てください．
+[python/README.md](python/README.md) を見てください．
 
