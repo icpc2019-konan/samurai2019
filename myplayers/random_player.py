@@ -64,22 +64,22 @@ while not is_last:
 
         if action == 0:
             y += 1
-        if action == 1:
+        elif action == 1:
             y += 1
             x -= 1
-        if action == 2:
+        elif action == 2:
             x -= 1
-        if action == 3:
+        elif action == 3:
             y -= 1
             x -= 1
-        if action == 4:
+        elif action == 4:
             y -= 1
-        if action == 5:
+        elif action == 5:
             y -= 1
             x += 1
-        if action == 6:
+        elif action == 6:
             x += 1
-        if action == 7:
+        elif action == 7:
             y += 1
             x += 1
 
