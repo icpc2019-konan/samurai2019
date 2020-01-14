@@ -1,2 +1,2 @@
 #!/bin/sh
-python myplayers/random_player.py
+python myplayers/simple_player.py

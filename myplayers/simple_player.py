@@ -8,7 +8,12 @@ while not is_last:
     read status
     '''
 
-    agent_id = int(input())
+    # this is for catching EOFError when remaining gold is zero
+    try:
+        agent_id = int(input())
+    except EOFError:
+        break
+    
     field_size = int(input())
     step  = int(input())
     max_num_step  = int(input())
@@ -48,7 +53,7 @@ while not is_last:
     time_remain = int(input())
 
     # last step?
-    if step+1 == max_num_step:
+    if step+1 == max_num_step or gold_remain == 0:
         is_last = True
 
         
@@ -120,7 +125,8 @@ while not is_last:
       * if there's no gold, stay close to closer dog 
 
     - dog
-      * random
+      * run after his samurai + some randomness
+      * when found a gold, don't move until his samurai is closer
     '''
     
     action = None
@@ -128,7 +134,78 @@ while not is_last:
 
         # for dogs 
         if agent_id >= 2:
-            action = check(random.randint(0, 8))
+            agent_x, agent_y = agents[agent_id]
+            
+            # find out relative x and y diff from his samurai
+            dx = agents[agent_id-2][0] - agent_x
+            dy = agents[agent_id-2][1] - agent_y
+
+            action = None
+
+            if len(gold_known) > 0:
+                for i in range(len(gold_known)):
+                    d = abs(gold_known[i][0] - agent_x) +\
+                        abs(gold_known[i][1] - agent_y)
+                    if d == 0:
+                        dxo = agents[(agent_id-1)%2][0] - agent_x
+                        dyo = agents[(agent_id-1)%2][1] - agent_y
+                        if abs(dx)+abs(dy)+1 > abs(dxo)+abs(dyo):
+                            action = -1
+
+            if action == None:
+                if len(gold_detect) > 0:
+                    dx = gold_detect[0][0] - agent_x
+                    dy = gold_detect[0][1] - agent_y
+                    if dx > 0:
+                        if dy > 0:
+                            action = check(7)
+                        elif dy < 0:
+                            action = check(5)
+                        else:
+                            action = check(6)
+                    elif dx < 0:
+                        if dy > 0:
+                            action = check(1)
+                        elif dy < 0:
+                            action = check(3)
+                        else:
+                            action = check(2)
+                    else:
+                        if dy > 0:
+                            action = check(0)
+                        elif dy < 0:
+                            action = check(4)
+                        
+
+            '''
+            if random.random() < .2 and abs(dx)+abs(dy) > 4:
+            
+                if dx > 0:
+                    if dy > 0:
+                        action = check(7)
+                    elif dy < 0:
+                        action = check(5)
+                    if action == None:
+                        action = check(6)
+                elif dx < 0:
+                    if dy > 0:
+                        action = check(1)
+                    elif dy < 0:
+                        action = check(3)
+                    if action == None:
+                        action = check(2)
+                if action == None:
+                    if dy > 0:
+                        action = check(0)
+                    elif dy < 0:
+                        action = check(4)
+            '''
+
+            if action == None:
+                action = check(actions[agent_id])
+            
+            if action == None:
+                action = check(random.randint(0, 8))
 
         # for samurais
         if agent_id <= 1:
@@ -137,7 +214,7 @@ while not is_last:
             
             if len(gold_known) > 0:
                 # find closest gold
-                min = -1
+                min = field_size * 2
                 min_id = -1
                 for i in range(len(gold_known)):
                     d = abs(gold_known[i][0] - agent_x) +\

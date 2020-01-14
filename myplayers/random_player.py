@@ -8,7 +8,12 @@ while not is_last:
     read status
     '''
 
-    agent_id = int(input())
+    # this is for catching EOFError when remaining gold is zero
+    try:
+        agent_id = int(input())
+    except EOFError:
+        break
+
     field_size = int(input())
     step  = int(input())
     max_num_step  = int(input())
