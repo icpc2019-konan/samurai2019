@@ -10,10 +10,10 @@ Python で自作プレイヤーを作るときの参考資料です．間違い�
 
 実行するときは，manager プログラムの引数として自分の作ったプログラムを指定します．ただし，実行可能なプログラムを指定する必要がありますので，Python のプログラムをそのまま指定することはできません．
 
-代わりに実行可能なシェルスクリプト [player.sh](myplayers/player.sh) を用意して，スクリプトの中からPythonのプログラムを呼び出します．
+代わりに実行可能なシェルスクリプト [ramdom_player.sh](myplayers/ramdom_player.sh) を用意して，スクリプトの中からPythonのプログラムを呼び出します．
 
 ```bash
-$ cat myplayers/player.sh
+$ cat myplayers/random_player.sh
 #!/bin/sh
 python myplayers/random_player.py
 ```
@@ -21,13 +21,13 @@ python myplayers/random_player.py
 chmod コマンドでパーミッションを与えて実行可能にするのを忘れないようにしましょう．
 
 ```bash
-$ chmod u+x myplayers/player.sh
+$ chmod u+x myplayers/random_player.sh
 ```
 
-次の例では，プレイヤーA，プレイヤーBとも，同じ player.sh を使っています．（ランダムプレイヤー同士の戦いです．）
+次の例では，プレイヤーA，プレイヤーBとも，同じ random_player.sh を使っています．（ランダムプレイヤー同士の戦いです．）
 
 ```bash
-$ manager/manager samples/sample.dighere myplayers/player.sh myplayers/player.sh > random.dighere
+$ manager/manager samples/sample.dighere myplayers/random_player.sh myplayers/random_player.sh > random.dighere
 ```
 
-なお，出力されるログファイル random.dighere を[デモプログラム](https://tastasgit.github.io/Software-for-IPSJ-International-AI-Programming-Contest-SamurAI-Coding-2019-2020/webpage/dighere.html)に読み込んでプレーの様子を再生しようとすると，何ステップ目かでエラーになってしまいます．これはどうもプレイヤーが壁の方向など動けない方向に動こうとしたときに起きてしまうようです．実際にはランダムではなくもう少し賢い戦略を考えますので，その場合はエラーにはならないと思われます．
+なお，出力されるログファイル random.dighere を[デモプログラム](https://tastasgit.github.io/Software-for-IPSJ-International-AI-Programming-Contest-SamurAI-Coding-2019-2020/webpage/dighere.html)に読み込むと，プレーの様子を再生することができます．
